@@ -1,0 +1,68 @@
+databases:
+- database_name: Insee
+  extra: '{"metadata_params":{},"engine_params":{},"schemas_allowed_for_csv_upload":"[]"}'
+  sqlalchemy_uri: postgresql+psycopg2://superset:superset@db:5432/mortalite_insee
+  tables:
+  - columns:
+    - column_name: agegroup
+      expression: "CASE \n  WHEN DATE_PART('year',date_deces) - DATE_PART('year',\
+        \ date_naissance) = 0 THEN '[Morts N\xE9s]'\n  WHEN DATE_PART('year',date_deces)\
+        \ - DATE_PART('year', date_naissance) < 15 THEN '[Under 15]'\n  WHEN DATE_PART('year',date_deces)\
+        \ - DATE_PART('year', date_naissance) BETWEEN 15 AND 20 THEN '[15-20]'\n \
+        \ WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN\
+        \ 20 AND 30 THEN '[20-30]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year',\
+        \ date_naissance) BETWEEN 30 AND 40 THEN '[30-40]'\n  WHEN DATE_PART('year',date_deces)\
+        \ - DATE_PART('year', date_naissance) BETWEEN 40 AND 50 THEN '[40-50]'\n \
+        \ WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN\
+        \ 50 AND 60 THEN '[50-60]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year',\
+        \ date_naissance) BETWEEN 60 AND 70 THEN '[60-70]'\n  WHEN DATE_PART('year',date_deces)\
+        \ - DATE_PART('year', date_naissance) BETWEEN 70 AND 80 THEN '[70-80]'\n \
+        \ WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN\
+        \ 80 AND 90 THEN '[80-90]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year',\
+        \ date_naissance) BETWEEN 90 AND 100 THEN '[90-100]'\n  ELSE '[100+]'\nEND\n"
+      type: STRING
+      verbose_name: agegroup
+    - column_name: sexeliteral
+      description: Sexe converted from int to text
+      expression: 'CASE when sexe = 1 then ''Homme'' when sexe = 2 then ''Femme''
+        END
+
+
+        '
+      type: STRING
+      verbose_name: Sexe literal
+    - column_name: ageofdeath
+      expression: DATE_PART('year',date_deces) - DATE_PART('year', date_naissance)
+      type: NUMERIC
+    - column_name: date_naissance
+      is_dttm: true
+      type: DATE
+    - column_name: date_deces
+      is_dttm: true
+      type: DATE
+    - column_name: numero_acte_deces
+      type: VARCHAR(10)
+    - column_name: pays_naissance
+      type: VARCHAR(30)
+    - column_name: lieu_naissance
+      type: VARCHAR(40)
+    - column_name: prenoms
+      type: VARCHAR(80)
+    - column_name: nom
+      type: VARCHAR(80)
+    - column_name: code_lieu_naissance
+      type: VARCHAR(5)
+    - column_name: code_lieu_deces
+      type: VARCHAR(5)
+    - column_name: sexe
+      type: INTEGER
+    main_dttm_col: date_naissance
+    metrics:
+    - expression: COUNT(*)
+      extra: '{"warning_markdown":""}'
+      metric_name: count
+      verbose_name: COUNT(*)
+    params: '{"remote_id": 28, "database_name": "Insee", "import_time": 1637100833}'
+    schema: public
+    sql: ''
+    table_name: insee

@@ -1,0 +1,424 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Dexter Dashboard",
+                "description": null,
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"remote_id\": 1, \"import_time\": 1637107102}",
+                "position_json": "{\"CHART--7IJtgbDpc\":{\"children\":[],\"id\":\"CHART--7IJtgbDpc\",\"meta\":{\"chartId\":1,\"height\":50,\"sliceName\":\"Temporal deaths\",\"uuid\":\"897b3a5e-0e6c-465a-ad06-e02b58d99bf6\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-yGbMn5Hra\"],\"type\":\"CHART\"},\"CHART-b6bbJvGc_q\":{\"children\":[],\"id\":\"CHART-b6bbJvGc_q\",\"meta\":{\"chartId\":3,\"height\":50,\"sliceName\":\"How to kill intelligently with statistics\",\"uuid\":\"5ec0e348-9218-479e-bb33-823f6d10a1de\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-0Qw98m19V\"],\"type\":\"CHART\"},\"CHART-reausJnD57\":{\"children\":[],\"id\":\"CHART-reausJnD57\",\"meta\":{\"chartId\":2,\"height\":50,\"sliceName\":\"Morts par jour 2019 \\u00e0 2021\",\"uuid\":\"0b854ad3-a23d-476f-ae08-d34e1c4e8211\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-yGbMn5Hra\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-yGbMn5Hra\",\"ROW-0Qw98m19V\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Dexter Dashboard\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-0Qw98m19V\":{\"children\":[\"CHART-b6bbJvGc_q\"],\"id\":\"ROW-0Qw98m19V\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-yGbMn5Hra\":{\"children\":[\"CHART--7IJtgbDpc\",\"CHART-reausJnD57\"],\"id\":\"ROW-yGbMn5Hra\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.insee",
+                            "datasource_type": "table",
+                            "id": 1,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"contributionMode\": null, \"datasource\": \"28__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"date_deces\", \"groupby\": [], \"label_colors\": {}, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"limit\": 0, \"markerSize\": 6, \"metrics\": [\"count\"], \"opacity\": 0.2, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"seriesType\": \"line\", \"time_grain_sqla\": \"P1W\", \"time_range\": \"2019-01-01 : 2021-12-31\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries\", \"x_axis_time_format\": \"smart_date\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 1, \"datasource_name\": \"insee\", \"schema\": \"public\", \"database_name\": \"Insee\", \"import_time\": 1637107102}",
+                            "query_context": "{\"datasource\":{\"id\":28,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"2019-01-01 : 2021-12-31\",\"granularity\":\"date_deces\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1W\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[\"count\"],\"orderby\":[[\"count\",false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"count\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Temporal deaths",
+                            "viz_type": "echarts_timeseries"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.insee",
+                            "datasource_type": "table",
+                            "id": 2,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"28__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"date_deces\", \"groupby\": [\"agegroup\"], \"label_colors\": {}, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"limit\": 100, \"markerSize\": 6, \"metrics\": [\"count\"], \"opacity\": 0.2, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"seriesType\": \"line\", \"time_grain_sqla\": \"P1D\", \"time_range\": \"2019-01-01 : 2021-12-31\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries\", \"x_axis_time_format\": \"smart_date\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 2, \"datasource_name\": \"insee\", \"schema\": \"public\", \"database_name\": \"Insee\", \"import_time\": 1637107102}",
+                            "query_context": "{\"datasource\":{\"id\":28,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"2019-01-01 : 2021-12-31\",\"granularity\":\"date_deces\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"agegroup\"],\"metrics\":[\"count\"],\"orderby\":[[\"count\",false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":100,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[\"agegroup\"],\"aggregates\":{\"count\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Morts par jour 2019 \u00e0 2021",
+                            "viz_type": "echarts_timeseries"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.insee",
+                            "datasource_type": "table",
+                            "id": 3,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"bar_stacked\": false, \"bottom_margin\": \"auto\", \"color_scheme\": \"lyftColors\", \"comparison_type\": \"values\", \"contribution\": false, \"datasource\": \"28__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"date_deces\", \"groupby\": [\"sexeliteral\"], \"label_colors\": {}, \"left_margin\": \"auto\", \"limit\": null, \"line_interpolation\": \"linear\", \"metrics\": [{\"aggregate\": \"COUNT\", \"column\": {\"column_name\": \"sexe\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 776, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT(sexe)\", \"optionName\": \"metric_iqv911i2wmg_rg6d7l9rr6\", \"sqlExpression\": null}], \"order_desc\": false, \"reduce_x_ticks\": true, \"rich_tooltip\": true, \"rolling_periods\": \"\", \"rolling_type\": \"None\", \"row_limit\": null, \"show_bar_value\": false, \"show_brush\": \"auto\", \"show_legend\": true, \"slice_id\": 143, \"time_grain_sqla\": \"P1M\", \"time_range\": \"2017-01-01 : 2017-12-31\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"bar\", \"x_axis_format\": \"smart_date\", \"x_ticks_layout\": \"45\\u00b0\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 3, \"datasource_name\": \"insee\", \"schema\": \"public\", \"database_name\": \"Insee\", \"import_time\": 1637107102}",
+                            "query_context": "{\"datasource\":{\"id\":28,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"2017-01-01 : 2017-12-31\",\"granularity\":\"date_deces\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1M\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"sexeliteral\"],\"metrics\":[{\"aggregate\":\"COUNT\",\"column\":{\"column_name\":\"sexe\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":776,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"INTEGER\",\"type_generic\":0,\"verbose_name\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":false,\"isNew\":false,\"label\":\"COUNT(sexe)\",\"optionName\":\"metric_iqv911i2wmg_rg6d7l9rr6\",\"sqlExpression\":null}],\"annotation_layers\":[],\"timeseries_limit\":0,\"order_desc\":false,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "How to kill intelligently with statistics",
+                            "viz_type": "bar"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "nom",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 10,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(80)",
+                            "uuid": "96d681ba-2736-441d-8d45-b2d9bb1b7558",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "prenoms",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 9,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(80)",
+                            "uuid": "e19ea9b2-a072-4cb7-9c68-46e49172b6a4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "sexe",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 13,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "INTEGER",
+                            "uuid": "36d6f96c-d8b0-42c4-b5b0-9c3a4eac2478",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "date_naissance",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 4,
+                            "is_active": null,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "DATE",
+                            "uuid": "60897397-523f-4b51-8b82-be01e0fef2ea",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "code_lieu_naissance",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 11,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(5)",
+                            "uuid": "be093c91-2227-4f31-9547-57f9fad447e0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "lieu_naissance",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 8,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(40)",
+                            "uuid": "8b7fef8a-d34e-4ef4-80dc-4444b7dd23a4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "pays_naissance",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 7,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(30)",
+                            "uuid": "561ca23d-2cb6-449e-8315-2eb65811bfe8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "date_deces",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 5,
+                            "is_active": null,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "DATE",
+                            "uuid": "7ed5f4ae-b821-412b-87b2-b19a140f5803",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "code_lieu_deces",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 12,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(5)",
+                            "uuid": "bf9765b3-0eba-44c0-a3f8-f66cd4780853",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "numero_acte_deces",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 6,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "VARCHAR(10)",
+                            "uuid": "6feef9d8-713b-4663-8451-cfabf9832af8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "ageofdeath",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": "DATE_PART('year',date_deces) - DATE_PART('year', date_naissance)",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 3,
+                            "is_active": null,
+                            "is_dttm": null,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "NUMERIC",
+                            "uuid": "758e1505-a177-4d76-b7ae-7cdc1f0f68eb",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "agegroup",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": null,
+                            "expression": "CASE \n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) = 0 THEN '[Morts N\u00e9s]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) < 15 THEN '[Under 15]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 15 AND 20 THEN '[15-20]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 20 AND 30 THEN '[20-30]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 30 AND 40 THEN '[30-40]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 40 AND 50 THEN '[40-50]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 50 AND 60 THEN '[50-60]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 60 AND 70 THEN '[60-70]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 70 AND 80 THEN '[70-80]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 80 AND 90 THEN '[80-90]'\n  WHEN DATE_PART('year',date_deces) - DATE_PART('year', date_naissance) BETWEEN 90 AND 100 THEN '[90-100]'\n  ELSE '[100+]'\nEND\n",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1,
+                            "is_active": null,
+                            "is_dttm": null,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "STRING",
+                            "uuid": "c3167067-b28a-4272-ba16-49edf4674c34",
+                            "verbose_name": "agegroup"
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:22"
+                            },
+                            "column_name": "sexeliteral",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "description": "Sexe converted from int to text",
+                            "expression": "CASE when sexe = 1 then 'Homme' when sexe = 2 then 'Femme' END\n\n",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 2,
+                            "is_active": null,
+                            "is_dttm": null,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "STRING",
+                            "uuid": "a413823d-51bf-4bdf-8b2e-d6234d1a16ec",
+                            "verbose_name": "Sexe literal"
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "date_naissance",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-11-16T23:58:18"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": "{\"warning_markdown\":\"\"}",
+                            "id": 1,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 1,
+                            "uuid": "d8c6e971-060a-4910-a602-538b64797ff2",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 1, \"database_name\": \"Insee\", \"import_time\": 1637107102}",
+                "schema": "public",
+                "sql": "",
+                "table_name": "insee",
+                "template_params": null
+            }
+        }
+    ]
+}

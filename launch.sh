@@ -5,7 +5,7 @@ set -e
 echo "Launching database initialization"
 docker-compose up -d db
 # Because it's faster
-sleep 220
+sleep 240
 echo "Launching init service"
 docker-compose up -d superset-init
 sleep 120
